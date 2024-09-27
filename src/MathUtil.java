@@ -18,7 +18,14 @@ public class MathUtil {
     }
 
     public static void gcd(int a, int b){
-
+//        so this method calculates the gcd, using simple formula
+//        this method will work untill b will not equal 0 (if b is 0, gcd is just an a)
+        while (b!=0){
+            int t = b;
+            b = a % b;
+            a = t;
+        }
+        System.out.println(a);
     }
 
     public static void lcm(int a, int b){
