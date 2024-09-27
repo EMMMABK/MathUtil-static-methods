@@ -2,19 +2,19 @@ public class MathUtil {
     public static void isPrime(int n){
 //        I used "if" because I check for numbers less than two, which aren't prime
         if (n <= 1){
-            System.out.println(false);
+            System.out.println("not prime");
             return;
         }
 //    Here I used google to find Math.sqrt(n), because without it i can't check for factors from two
 //        to the square root of n, so math.sqrt is using for find square root
-        for (int i=2; i<Math.sqrt(n); i++){
+        for (int i=2; i<=Math.sqrt(n); i++){
             if (n%i==0){
-                System.out.println(false);
+                System.out.println("not prime");
                 return;
             }
         }
 //        so after these operations, if operations didn't find divisors, answer is a prime.
-        System.out.println(true);
+        System.out.println("prime");
     }
 
     public static void gcd(int a, int b){
