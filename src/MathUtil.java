@@ -62,17 +62,18 @@ public class MathUtil {
     }
 
     public boolean isPerfectNumber(int n){
-        int sumOf = 1;
-        for(int i=2;i<=Math.sqrt(n); i++){
-            if(n%1==0){
+        int sumOf = 1; // Start with 1, since 1 is a proper divisor of all integers
+        for(int i=2;i<=Math.sqrt(n); i++){ // iterate from 2 to the square root of n
+            if(n%1==0){ // it checks if i is a divisor of n
                 sumOf += i+(n/i != i ? n/i:0);
             }
         }
-        return sumOf == n && n!=1;
+        return sumOf == n && n!=1; //just cheking
     }
 
     public int sumOfDigits(int n){
         int sum = 0;
+        // this method just count from 0 to n numbers and calculate the sum of its difference
         for(int i=0; i<=n;i++){
             sum+=i;
         }
@@ -81,21 +82,49 @@ public class MathUtil {
 
     public int reverseNumber(int n){
         int total = 0;
-        while(n!=0){
-            int a = n%10;
-            total = total*10+a;
-            n/=10;
+        while(n!=0){ // willne till b becomes 0
+            int a = n%10; // get last num of n
+            total = total*10+a; // total left and the last num
+            n/=10; //remove
         }
         return total;
     }
 
-    public void isArmstrongNumber(int n){
+    public boolean isArmstrongNumber(int n) {
+        int sum = 0;
+        int nums = 0;
+        int t = n; // it's just a n
+
+        // Count the number of nums
+        while (t > 0) {
+            t /= 10;
+            nums++;
+        }
+
+        // reset t back to n to calculate the sum of the powers
+        t = n;
+        while (t > 0) {
+            int num = t % 10; // get the last digit
+            int degree = 1;
+
+            // Calculate digit raised to the power of nums
+            for (int i = 0; i < nums; i++) {
+                degree *= num;
+            }
+
+            sum += degree; // Add the powered digit to the sum
+            t /= 10; // Remove the last digit
+        }
+
+        // Compare the sum to the original number n
+        return sum == n; // Use n for comparison
     }
 
+
     public int nextPrime(int n){
-        int a=n+1;
-        while(!isPrime(a)){
-            a++;
+        int a=n+1; //starts checking from the next num after n
+        while(!isPrime(a)){  // continue loopng till a prime will be found
+            a++;// increment a to check next num
         }
         return a;
     }
