@@ -16,5 +16,12 @@ public class Main {
 
 //        call the ! without creating an object
         System.out.println("Factorial:" + MathUtil.factorial(5));
+
+//        Creating an object
+        MathUtil math = new MathUtil();
+        System.out.print("Perfect:" + math.isPerfectNumber(5));
+        System.out.print("Sum:");
+        System.out.print("Reverse:");
+
     }
 }

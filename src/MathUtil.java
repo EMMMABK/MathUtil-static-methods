@@ -61,8 +61,14 @@ public class MathUtil {
         return a;
     }
 
-    public void isPerfectNumber(int n){
-
+    public boolean isPerfectNumber(int n){
+        int sumOf = 1;
+        for(int i=2;i<=Math.sqrt(n); i++){
+            if(n%1==0){
+                sumOf += i+(n/i != i ? n/i:0);
+            }
+        }
+        return sumOf == n && n!=1;
     }
 
     public void sumOfDigits(int n){
