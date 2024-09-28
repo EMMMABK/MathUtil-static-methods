@@ -32,11 +32,23 @@ public class MathUtil {
         return  (a*b)/gcd(a,b);
     }
 
-    public static void fibonacci(int n){
-
+    public static int fibonacci(int n){
+//i created a and b because google said: The first two numbers are given immediately and are equal to 0 and 1.
+        int a=0;
+        int b=1;
+        if (n <= 1){
+            return n;
+        }
+//        n is the position in fibonacci sequence, like n-th number
+        for (int i=2;i<=n;i++){
+            int t = a+b;
+            a=b;
+            b=t;
+        }
+        return b;
     }
 
-    public static void factorial(int n){
+    public static int factorial(int n){
 
     }
 

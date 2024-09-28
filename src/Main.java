@@ -10,5 +10,9 @@ public class Main {
 
 //        Call the methods without creating an object
         System.out.println("LCM:" + MathUtil.lcm(3,4));
+
+//        Call the fib method without creating an object;
+//        If my answer is not correct, i just didn't understand how to solve fibonacci
+        System.out.println("Fibonacci:" + MathUtil.fibonacci(3473));
     }
 }
