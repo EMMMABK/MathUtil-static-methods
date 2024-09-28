@@ -20,7 +20,7 @@ public class Main {
 //        Creating an object
         MathUtil math = new MathUtil();
         System.out.print("Perfect:" + math.isPerfectNumber(5));
-        System.out.print("Sum:");
+        System.out.print("Sum:" + math.sumOfDigits(10));
         System.out.print("Reverse:");
 
     }

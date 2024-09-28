@@ -71,8 +71,12 @@ public class MathUtil {
         return sumOf == n && n!=1;
     }
 
-    public void sumOfDigits(int n){
-
+    public int sumOfDigits(int n){
+        int sum = 0;
+        for(int i=0; i<=n;i++){
+            sum+=i;
+        }
+        return sum;
     }
 
     public void reverseNumber(int n){
