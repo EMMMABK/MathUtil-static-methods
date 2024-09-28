@@ -79,15 +79,24 @@ public class MathUtil {
         return sum;
     }
 
-    public void reverseNumber(int n){
-
+    public int reverseNumber(int n){
+        int total = 0;
+        while(n!=0){
+            int a = n%10;
+            total = total*10+a;
+            n/=10;
+        }
+        return total;
     }
 
     public void isArmstrongNumber(int n){
-
     }
 
-    public void nextPrime(int n){
-
+    public int nextPrime(int n){
+        int a=n+1;
+        while(!isPrime(a)){
+            a++;
+        }
+        return a;
     }
 }

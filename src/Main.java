@@ -21,7 +21,7 @@ public class Main {
         MathUtil math = new MathUtil();
         System.out.print("Perfect:" + math.isPerfectNumber(5));
         System.out.print("Sum:" + math.sumOfDigits(10));
-        System.out.print("Reverse:");
-
+        System.out.print("Reverse:" + math.reverseNumber(234));
+        System.out.print("Next prime:" + math.nextPrime(11));
     }
 }
