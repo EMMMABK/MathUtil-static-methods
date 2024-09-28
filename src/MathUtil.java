@@ -49,7 +49,16 @@ public class MathUtil {
     }
 
     public static int factorial(int n){
-
+        int a = 1;
+        if(n == 0 || n == 1){
+            return 1;
+        }
+//        so if n eqauls to 0,1 that's means 1! = 1 like this
+        for(int i=2;i<=n;i++){
+            a *=i; // a = a * i
+        }
+//     for loop this is a loop that starts with i equal to 2 and will run until i is greater than n. After each iteration i increases by 1
+        return a;
     }
 
     public void isPerfectNumber(int n){
