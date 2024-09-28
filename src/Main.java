@@ -2,14 +2,13 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
-        int n = 7;
 //        Call the isPrime method without creating an object;
-        MathUtil.isPrime(n);
+        System.out.println("Prime:" + MathUtil.isPrime(7));
 
-        int a = 14;
-        int b = 21;
 //        Call the gcd method without creating an object;
-        MathUtil.gcd(a,b);
+        System.out.println("GCD:" + MathUtil.gcd(14,28));
+
+//        Call the methods without creating an object
+        System.out.println("LCM:" + MathUtil.lcm(3,4));
     }
 }
